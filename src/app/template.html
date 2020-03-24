@@ -9,45 +9,72 @@
 </head>
 
 <body>
-    <nav class="navbar is-light" role="navigation" aria-label="main navigation">    
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
         <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <div class="navbar-item">
-                <span class="icon">
-                    <i class="fas fa-bars"></i>
-                </span>
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <a id="menuToggleButton" class="button is-small is-light">
+                        <span class="icon is-small">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </a>
+                </div>
+
             </div>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-                <span class="icon ">
-                    <i class="far fa-window-minimize"></i>
-                </span>
-                <span class="icon">
-                    <i class="far fa-window-maximize"></i>
-                </span>
-                <span class="icon">
-                    <i class="fas fa-times"></i>
-                </span>
+
+            <div class="navbar-end is-ho">
+                <div class="navbar-item">
+                    <a id="minimizeButton" class="button is-small is-light">
+                        <span class="icon is-small">
+                            <i class="far fa-window-minimize"></i>
+                        </span>
+                    </a>
+                    <a id="maximizeButton" class="button is-small is-light">
+                        <span class="icon is-small">
+                            <i class="far fa-window-maximize"></i>
+                        </span>
+                    </a>
+                    <a id="closeButton" class="button is-small is-light">
+                        <span class="icon is-small">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </a>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                Hello World
-            </h1>
-            <p class="subtitle">
-                My first website with <strong>Bulma</strong>!
-            </p>
-            <button class="button is-primary">
-                Button
-            </button>
-            
+    </nav>
+
+    <div class="columns">
+        <div id="menuColumn" class="column is-3 is-fullheight">
+            <aside class="menu is-fullheight">
+                <p class="menu-label">
+                    General
+                </p>
+                <ul class="menu-list">
+                    <li><a>Dashboard</a></li>
+                    <li><a>Customers</a></li>
+                </ul>
+            </aside>
         </div>
-    </section>
+        <div class="column">
+            <section class="section">
+                <div class="container">
+                    <h1 class="title">
+                        Hello World
+                    </h1>
+                    <p class="subtitle">
+                        My first website with <strong>Bulma</strong>!
+                    </p>
+                    <button class="button is-primary">
+                        Button
+                    </button>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

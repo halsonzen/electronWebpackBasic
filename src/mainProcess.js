@@ -19,6 +19,7 @@ app.on('ready', () => {
   // Erstelle das Browser-Fenster.
   // and load the index.html of the app.
 
+ 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })
@@ -51,6 +52,8 @@ app.on('ready', () => {
       app.quit()
     }
   })
+
+
 
   /**  Possible second window integration
   

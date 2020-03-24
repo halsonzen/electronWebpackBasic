@@ -7,4 +7,4 @@
 
 //Self written modules
 import './app/main.scss'
-import './app/changeColor.js'
+import './app/util_navbar.js'

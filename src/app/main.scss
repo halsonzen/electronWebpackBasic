@@ -1,13 +1,16 @@
-//External imports
+//Bulma custom variables
 $navbar-height: 2.5rem;
 $primary: hsl(13, 100%, 57%);
+$link: hsl(245, 82%, 25%);
 
+//JSS Grey #D0C3BD
 
+//External imports
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/regular';
-@import "bulma/bulma.sass";
+@import "bulma";
 
 
 //Custom sytles
@@ -16,24 +19,27 @@ body{
     background-color: white;
     border-top: 2px solid white;
 }
-
 .navbar-end span.icon{
     margin-left: 15px;
 }
 
-// div{
-//     padding: 24px 0;
-// }
-
-.red{
-    color: red;
+.navbar-start span.icon{
+    margin-left: 15px;
 }
 
 
+aside{
+    padding: 20px;
+    border-right: 2px solid $light;
+    height: 100vh
+}
+.red{
+    color: red;
+}
 nav{
-    // // height: 40px;
-    // background-color: whitesmoke;
-    // width: 100vw;
     -webkit-app-region: drag; // Makes the wohle element dragable
+}
+.navbar-item{
+    -webkit-app-region: no-drag; // Makes the wohle element dragable
 }
 
