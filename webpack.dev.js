@@ -18,7 +18,7 @@ module.exports = merge(common, {
                 use: ["html-loader"]
             },
             {
-                test: /\.(svg|png|jpg|gif)$/,
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: {
                     loader: "file-loader",
                     options: {
@@ -29,15 +29,15 @@ module.exports = merge(common, {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|sass)$/,
                 use: [
                     "style-loader",
                     "css-loader",
                     "sass-loader"
                 ]
-            }
+            },
         ]
-    },
+    },  
     plugins: [
         new HtmlWebpackPlugin({
             filename: "./index.html",

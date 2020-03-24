@@ -1,20 +1,39 @@
+//External imports
+$navbar-height: 2.5rem;
+$primary: hsl(13, 100%, 57%);
+
+
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import "bulma/bulma.sass";
+
+
+//Custom sytles
 html { overflow-y: hidden; }
 body{
     background-color: white;
     border-top: 2px solid white;
 }
 
-div{
-    padding: 24px 0;
+.navbar-end span.icon{
+    margin-left: 15px;
 }
+
+// div{
+//     padding: 24px 0;
+// }
 
 .red{
     color: red;
 }
 
+
 nav{
-    height: 40px;
-    background-color: whitesmoke;
-    width: 100vw;
+    // // height: 40px;
+    // background-color: whitesmoke;
+    // width: 100vw;
     -webkit-app-region: drag; // Makes the wohle element dragable
 }
+

@@ -5,13 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
 </head>
 
 <body>
-    <nav>
-    </nav>
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">    
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <div class="navbar-item">
+                <span class="icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+                <span class="icon ">
+                    <i class="far fa-window-minimize"></i>
+                </span>
+                <span class="icon">
+                    <i class="far fa-window-maximize"></i>
+                </span>
+                <span class="icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+          </div>
+        </div>
+      </nav>
     <section class="section">
         <div class="container">
             <h1 class="title">
@@ -20,6 +42,10 @@
             <p class="subtitle">
                 My first website with <strong>Bulma</strong>!
             </p>
+            <button class="button is-primary">
+                Button
+            </button>
+            
         </div>
     </section>
 </body>
