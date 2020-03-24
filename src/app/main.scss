@@ -1,5 +1,7 @@
+html { overflow-y: hidden; }
 body{
     background-color: white;
+    border-top: 2px solid white;
 }
 
 div{
@@ -8,4 +10,11 @@ div{
 
 .red{
     color: red;
+}
+
+nav{
+    height: 40px;
+    background-color: whitesmoke;
+    width: 100vw;
+    -webkit-app-region: drag; // Makes the wohle element dragable
 }

@@ -6,8 +6,7 @@ const merge = require("webpack-merge");
 
 
 module.exports =  merge(common, {
-    mode: "development", // no minify 
-    devtool: "none",
+    mode: "production", 
     target: "electron-renderer",
     entry: {  //entry points of webpack 
         rendererProcess: "./src/rendererProcess.js",

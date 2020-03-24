@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bulma": "^0.8.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
     "electron": "^8.1.1",
