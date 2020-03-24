@@ -2,17 +2,17 @@
 This package is a basic integration of electron into the webpack framework.
 ## Features
 #### included
-+ development and procduction mode
-+ webserver integration when in development mode with live reload
++ Development and procduction mode
++ Webserver integration when in development mode with live reload
 #### still to come
-+ some kind of css framework (styling)
-+ code linting somewhat (linting)
-+ some kind of testing environmnet (testing)
-+ packaging of the electron app (packaging)
++ Some kind of css framework (styling)
++ Code linting somewhat (linting)
++ Some kind of testing environmnet (testing)
++ Packaging of the electron app (packaging)
 
 ## Getting started
 + Make sure you have nodeJs installed on your machine
-+ Download the repository an store it in a local folder 
++ Download the repository and store it in a local folder 
 + Open the folder in the command line 
 + Run following command
 ``` 
@@ -45,7 +45,7 @@ import './app/newFile.js'
 ```
 #### Changing HTML content
 + To change the HTML part of the app just change the './app/template.html' and save the changes
-+ Framework will notice changes and will adapt the app in development mode or adapt the outputfiles in production mode
++ Framework will notice changes and will adapt the app in development mode or adapt the output files in production mode
 
 ### Production mode
 + Run following command to start production mode 
