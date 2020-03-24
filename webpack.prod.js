@@ -15,33 +15,7 @@ module.exports =  merge(common, {
         filename: '[name].js', //output filenam
         path: path.resolve(__dirname, "dist") // path of the output file
     },
-    module: {
-        rules: [
-            {
-                test: /\.html$/,
-                use: ["html-loader"]
-            },
-            {
-                test: /\.(svg|png|jpg|gif)$/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        name: "[name].[hash].[ext]",
-                        outputPath: "./assets",
-                        esModule: false
-                    }
-                }
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
-            }
-        ]
-    },
+   
     plugins: [
         new HtmlWebpackPlugin({
             filename: "./index.html",
