@@ -7,7 +7,7 @@
   "scripts": {
     "start": "webpack --config webpack.common.js ",
     "dev": "npm start && webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js && electron ."
+    "prod": "webpack --config webpack.prod.js && electron ."
   },
   "keywords": [],
   "author": "",

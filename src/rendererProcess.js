@@ -1,4 +1,3 @@
-import "./app/main.scss"
-const { ipcRenderer, remote } = require('electron')
-console.log("hello from renderer");
+import './app/main.scss'
+import './app/changeColor.js'
 

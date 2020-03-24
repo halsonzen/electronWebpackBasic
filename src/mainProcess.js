@@ -1,6 +1,5 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
-const mainWindowFilePath = "./dist/index.html";
-const development = process.argv.includes("--development") ? true : false;
+const development = process.argv.includes('--development') ? true : false;
 const url = require('url');
 const path = require('path')
 
