@@ -2,35 +2,31 @@ const sideBar = document.querySelector('#sideBar');
 const menuBreadCrump = document.querySelector('#breadCrumb');
 const menuElements = createMenuObject();
 const activeQualifier = 'is-active';
-// setActiveSelection();
-// updateBreadCrump();
+const activeQualifierSub = 'is-active-sub';
+
+
+setActiveQualifiers();
+updateBreadCrump();
 
 //Set is-active class to show which Element is currently selected
 sideBar.addEventListener('click', (e) => {
     const target = e.target;
     if (target.tagName === 'A') {
-        //Browse through all main menu Entrys
-        for(mainMenuEntry in menuElements){
-            menuElements[mainMenuEntry].htmlElement.classList.remove(activeQualifier)
-            if (target === menuElements[mainMenuEntry].htmlElement){
-                target.classList.add(activeQualifier);
-            }
-            else if (target !== menuElements[mainMenuEntry].htmlElement && menuElements[mainMenuEntry].subMenu){
-                for(subMenuEntry in menuElements[mainMenuEntry].subMenu){
-                    if(target === menuElements[mainMenuEntry].subMenu[subMenuEntry].htmlElement){
-                        menuElements[mainMenuEntry].htmlElement.classList.add(activeQualifier)
-                    }
-                }
-            }
-        }
-        // setActiveSelection(e);
-        // updateBreadCrump();
+        removeActiveQualifiers();
+        setActiveQualifiers(e);
+        updateBreadCrump();
     }
-
 }, false)
 
-
 /**HELPER FUNCTIOND */
+function removeActiveQualifiers() {
+    const activeElement = sideBar.querySelector('.' + activeQualifier);
+    const activeSubElement = sideBar.querySelector('.' + activeQualifierSub);
+    if (activeElement)
+        activeElement.classList.remove(activeQualifier);
+    if (activeSubElement)
+        activeSubElement.classList.remove(activeQualifierSub);
+}
 function createMenuObject() {
     const menuObject = {};
     [].map.call(sideBar.querySelectorAll('a'), (curElement, index) => {
@@ -54,42 +50,46 @@ function createMenuObject() {
     }
     return menuObject;
 };
+function setActiveQualifiers(event) {
 
-// function setActiveSelection(event) {
-//     if(!event){
-//         menuElements[0].menuElement.classList.add(activeQualifier);
-//     }
-//     if (event) {
-//         const clickTarget = event.target;
+    if (!event) {
+        menuElements[0].htmlElement.classList.add(activeQualifier);
+    }
+    if (event) {
+        const target = event.target;
+        //Browse through all main menu Entrys
+        for (index in menuElements) {
+            if (target === menuElements[index].htmlElement) {
+                target.classList.add(activeQualifier);
+            }
+            else if (target !== menuElements[index].htmlElement && menuElements[index].subMenu) {
+                for (subMenuEntry in menuElements[index].subMenu) {
+                    if (target === menuElements[index].subMenu[subMenuEntry].htmlElement) {
+                        menuElements[index].htmlElement.classList.add(activeQualifier);
+                        menuElements[index].subMenu[subMenuEntry].htmlElement.classList.add(activeQualifierSub);
+                    }
+                }
+            }
 
-//         //Go through all main menu elements to reorganize the selection
-//         for (menuEntry in menuElements) {
+        }
+    }
+}
+function updateBreadCrump() {
+    const activeElement = sideBar.querySelector('.' + activeQualifier);
+    const activeSubElement = sideBar.querySelector('.' + activeQualifierSub);
+    const breadCrumpList = menuBreadCrump.querySelector('ul');
+    const listEntry = document.createElement("li");
+    const aTag = document.createElement("a");
 
-//             //First: remove class from all elements to have a blank menu
-//             menuElements[menuEntry].menuElement.classList.remove(activeQualifier);
+    breadCrumpList.innerHTML = "";
+    aTag.innerText = activeElement.innerHTML;
+    listEntry.appendChild(aTag);
 
-//             //Second: setting the class to make the clicked element active 
-//             if (clickTarget === menuElements[menuEntry].menuElement)
-//                 menuElements[menuEntry].menuElement.classList.add(activeQualifier);
-//             if (clickTarget === menuElements[menuEntry].menuElement.submenuList)
-//                 console.log(true)
-//         }
-//     }
-// }
-
-// function updateBreadCrump() {
-//     for (menuEntry in menuElements) {
-//         if (menuElements[menuEntry].menuElement.classList.value.includes(activeQualifier)) {
-//             const breadCrumpList = menuBreadCrump.querySelector('ul');
-//             const listEntry = document.createElement("li");
-//             const aTag = document.createElement("a");
-
-//             breadCrumpList.innerHTML = "";
-//             aTag.innerText = menuElements[menuEntry].menuText;
-//             listEntry.appendChild(aTag);
-//             breadCrumpList.appendChild(listEntry);
-//         }
-//     }
-// }
+    ///Add submenuElement to breadcrump menu
+    console.log(activeSubElement)
+    //aTag.innerText = activeSubElement.innerHTML;
+    listEntry.appendChild(aTag);
+    breadCrumpList.appendChild(listEntry);
+}
 
 

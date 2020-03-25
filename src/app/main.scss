@@ -2,6 +2,7 @@
 $navbar-height: 2.5rem;
 $primary: hsl(13, 100%, 57%);
 $link: hsl(245, 82%, 25%);
+$subActive: hsl(19, 17%, 78%);
 
 //JSS Grey #D0C3BD
 body{
@@ -53,9 +54,11 @@ aside{
 .navbar-item{
     -webkit-app-region: no-drag; // Makes the wohle element dragable
 }
-
 #breadCrumb{
     padding-bottom: 0;
+}
+.is-active-sub{
+    background-color: $subActive	;
 }
 
 
