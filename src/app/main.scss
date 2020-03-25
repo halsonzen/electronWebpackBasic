@@ -4,7 +4,11 @@ $primary: hsl(13, 100%, 57%);
 $link: hsl(245, 82%, 25%);
 
 //JSS Grey #D0C3BD
-
+body{
+    background-color: white;
+    border-top: 2px solid white;
+    overflow: auto !important;
+}
 //External imports
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
@@ -13,12 +17,19 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import "bulma";
 
 
-//Custom sytles
-html { overflow-y: hidden; }
-body{
-    background-color: white;
-    border-top: 2px solid white;
+*{
+    overflow: hidden !important;
 }
+
+//Custom sytles
+
+
+#mainColumn{
+    overflow-y: auto !important;
+    height: 100vh;
+    margin-right: 10px;
+}
+
 .navbar-end span.icon{
     margin-left: 15px;
 }
@@ -27,19 +38,24 @@ body{
     margin-left: 15px;
 }
 
-
 aside{
     padding: 20px;
     border-right: 2px solid $light;
-    height: 100vh
+    height: 100vh;
+    overflow-y: auto !important;
 }
 .red{
     color: red;
 }
-nav{
+.navbar{
     -webkit-app-region: drag; // Makes the wohle element dragable
 }
 .navbar-item{
     -webkit-app-region: no-drag; // Makes the wohle element dragable
 }
+
+#breadCrumb{
+    padding-bottom: 0;
+}
+
 

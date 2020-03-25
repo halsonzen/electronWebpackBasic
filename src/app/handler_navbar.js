@@ -8,6 +8,7 @@ const closeButton = document.querySelector('#closeButton');
 
 menuToggleButton.addEventListener('click', () => {
     menuColumn.classList.toggle("is-hidden");
+    menuToggleButton.classList.toggle("is-active");
 }, false)
 
 minimizeButton.addEventListener('click', () => {
