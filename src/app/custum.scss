@@ -1,0 +1,40 @@
+// //Custom sytles
+
+
+#mainColumn{
+    overflow-y: auto !important;
+    height: 100vh;
+    margin-right: 10px;
+}
+
+.navbar-end span.icon{
+    margin-left: 15px;
+}
+
+.navbar-start span.icon{
+    margin-left: 15px;
+}
+
+aside{
+    padding: 20px;
+    border-right: 2px solid $light;
+    height: 100vh;
+    overflow-y: auto !important;
+}
+.red{
+    color: red;
+}
+.navbar{
+    -webkit-app-region: drag; // Makes the wohle element dragable
+}
+.navbar-item{
+    -webkit-app-region: no-drag; // Makes the wohle element dragable
+}
+#breadCrumb{
+    padding-bottom: 0;
+}
+.is-active-sub{
+    background-color: $subActive	;
+}
+
+
