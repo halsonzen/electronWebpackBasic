@@ -34,3 +34,10 @@ closeButton.addEventListener('click', () => {
     ipcRenderer.invoke('window.close')
 }, false)
 
+window.addEventListener('resize', ()=>{
+    const iElement = maximizeButton.querySelector('i');
+    if(window.outerHeight != window.screen.availHeight && window.outerWidth != window.screen.availWidth)
+        iElement.classList = 'far fa-window-maximize';
+    else
+        iElement.classList = 'far fa-window-restore';
+})
